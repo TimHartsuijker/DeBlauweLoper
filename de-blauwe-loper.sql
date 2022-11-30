@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 30 nov 2022 om 12:57
--- Serverversie: 10.4.25-MariaDB
--- PHP-versie: 8.1.10
+-- Gegenereerd op: 30 nov 2022 om 13:59
+-- Serverversie: 10.4.27-MariaDB
+-- PHP-versie: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,7 +34,7 @@ CREATE TABLE `game` (
   `winner_user_id` int(8) UNSIGNED DEFAULT NULL,
   `start_time` datetime NOT NULL,
   `end_time` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -46,7 +46,7 @@ CREATE TABLE `premission` (
   `id` int(8) UNSIGNED NOT NULL,
   `user_id` int(8) UNSIGNED NOT NULL,
   `premission` enum('members','games') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -57,9 +57,12 @@ CREATE TABLE `premission` (
 CREATE TABLE `user` (
   `id` int(8) UNSIGNED NOT NULL,
   `name` varchar(45) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `phone` varchar(10) NOT NULL,
+  `birth` date NOT NULL,
   `password_hash` varchar(400) NOT NULL,
   `member` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Indexen voor geëxporteerde tabellen
