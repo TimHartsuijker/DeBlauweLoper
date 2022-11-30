@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+require_once("classes/user.php");
+
 session_start();
 
 /** The root of the url also the path of the current folder
