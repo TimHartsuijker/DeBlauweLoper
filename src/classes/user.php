@@ -10,8 +10,7 @@ class user
         private string $phone,
         private string $email,
         private int $member,
-    )
-    {
+    ){
     }
     public function getId(): int
     {

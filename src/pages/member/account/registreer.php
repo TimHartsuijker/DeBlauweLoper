@@ -38,9 +38,8 @@ if(!empty($_POST)){
     if($_POST['password'] == $_POST['passwordRepeat']){
         $member = 1;
         $pUser = User::check($_POST['name']);
-        if($pUser == null){
+        if($pUser == null)
             $user = User::register($_POST['name'], $_POST['mail'],$_POST['phone'],  $_POST['birth'], $_POST['password'], $member);
-        }
     }
     header('Location:'.ROOT );
 }
