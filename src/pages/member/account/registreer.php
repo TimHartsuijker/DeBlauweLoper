@@ -11,12 +11,12 @@
 
     <label>
         geboortedatum:
-        <input type="date" name="date" required>
+        <input type="date" name="birth" required>
     </label>
 
     <label>
         telefoonnummer:
-        <input type="text" name="phoneNumber" required>
+        <input type="text" name="phone" required>
     </label>
 
     <label>
@@ -36,9 +36,10 @@
 <?php
 if(!empty($_POST)){
     if($_POST['password'] == $_POST['passwordRepeat']){
+        $member = 1;
         $pUser = User::check($_POST['name']);
         if($pUser == null){
-            $user = User::register($_POST['name'], $_POST['password'], 1);
+            $user = User::register($_POST['name'], $_POST['mail'],$_POST['phone'],  $_POST['birth'], $_POST['password'], $member);
         }
     }
     header('Location:'.ROOT );
