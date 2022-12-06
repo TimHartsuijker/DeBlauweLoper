@@ -40,6 +40,7 @@ if(!empty($_POST)){
         $pUser = User::check($_POST['name']);
         if($pUser == null)
             $user = User::register($_POST['name'], $_POST['mail'],$_POST['phone'],  $_POST['birth'], $_POST['password'], $member);
+
     }
     header('Location:'.ROOT );
 }
