@@ -1,18 +1,20 @@
-<nav class="navbar navbar-expand-lg shadow-sm kleur-header">
-    <div>
+<nav class="navbar navbar-expand-lg shadow-sm kleur-header col-12">
+    <div class="col-1">
         <a href="<?= ROOT ?> " class="navbar-brand">
             <img src="<?= ROOT ?>/img/pion.png" width="80vh" height="75vh" class="d-inline-block align-top logo">
         </a>
     </div>    
-    <div><h3><em>De Blauwe Loper</em></h3></div>
-    <div>
-        <ul>
-            <a href="">Overzicht</a>
-            <a href="">Evenementen</a>
-            <a href="">Informatie</a>
-            <a href="">Over ons</a>        
+    <div class="col-6"><h3><em>De Blauwe Loper</em></h3></div>
+    
+    <div col-5>
+        <ul class="text-link">
+            <a href="" class="btn">Overzicht</a>
+            <a href="" class="btn">Evenementen</a>
+            <a href="" class="btn">Informatie</a>
+            <a href="" class="btn">Over ons</a>
+            <a href="" class="btn">Kids</a> 
+            <a href="" class="btn">Inloggen/registreren</a>         
         </ul>
-
     </div>                
 </nav>
 
