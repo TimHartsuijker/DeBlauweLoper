@@ -12,14 +12,16 @@
 <?php
 if (!empty($_POST)) 
 {
-    $user = User::login($_POST['name'],$_POST['email'],$_POST['phone'],$_POST['birthdate'],$_POST['password'] );
+    $user = User::login($_POST['name'], $_POST['password'] );
 
     if(isset($user))
     {
         $_SESSION['user'] = $user;
+        echo "succes";
         header('Location:'.ROOT );
     }
     
 }
+
 
 ?>
