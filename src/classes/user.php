@@ -77,19 +77,17 @@ class user
     }
 
 
-    public static function login(string $name, string $password): ?User
+    public static function login(string $username, string $password): ?User
     {
         $params = array(
-            ":name" => $name,
-            ":password" => $password,
-
+            ":username" => $username,
         );
 
-        $sth = getPDO()->prepare("SELECT `id`, `name`, `password_hash` FROM `user` WHERE `name` = :name LIMIT 1;");
+        $sth = getPDO()->prepare("SELECT * FROM `user` WHERE `name` = :username LIMIT 1;");
         $sth->execute($params);
         if ($row = $sth->fetch())
             if (password_verify($password, $row["password_hash"]))
-                return new User($row["id"], $name, $row["password_hash"], $row["member"] != 0);
+                return new User($row["id"], $row["name"], $row["email"], $row["phone"], $row["birth"], $row["password_hash"], $row["member"] != 0);
 
         return null;
     }
