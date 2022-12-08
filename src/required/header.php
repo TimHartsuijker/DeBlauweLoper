@@ -10,10 +10,10 @@
         <ul class="text-link">
             <a href="" class="btn">Overzicht</a>
             <a href="" class="btn">Evenementen</a>
-            <a href="" class="btn">Informatie</a>
+            <a href="informatie" class="btn">Informatie</a>
             <a href="" class="btn">Over ons</a>
             <a href="" class="btn">Kids</a> 
-            <a href="" class="btn">Inloggen/registreren</a>         
+            <a href="account/login" class="btn">Inloggen/registreren</a>         
         </ul>
     </div>                
 </nav>

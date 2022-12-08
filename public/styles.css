@@ -5,8 +5,14 @@
     margin-top: 1%;
 }
 .text-link{
-    margin-top: 1%;
+    margin-top: 2%;
 }
+.btn{
+    background-color: #3A8891;
+    color: #FFFFFF;
+}
+/*Hier boven staat css voor de header*/
+
 body{
     background-color: #FFEFD6;
 }
