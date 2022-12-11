@@ -1,3 +1,12 @@
+<?php
+$folder = "member";
+
+if (isset($_SESSION["user"])) {
+    $folder = $_SESSION["user"]->getMember() == 0 ? "employee" : "member";
+}
+
+?>
+
 <nav class="navbar navbar-expand-lg shadow-sm kleur-header col-12">
     <div class="col-1">
         <a href="<?= ROOT ?> " class="navbar-brand">
@@ -12,8 +21,13 @@
             <a href="" class="btn">Evenementen</a>
             <a href="informatie" class="btn">Informatie</a>
             <a href="" class="btn">Over ons</a>
-            <a href="" class="btn">Kids</a> 
-            <a href="account/login" class="btn">Inloggen/registreren</a>         
+            <a href="" class="btn">Kids</a>
+            <?php if(isset($_SESSION["user"])) : ?> 
+                <a href="<?= ROOT . "/member/account/uitloggen" ?>" class="btn">uitloggen</a>
+            <?php else : ?>
+                <?php $onPage = (ROUTE == "/member/account/login") ?>
+                <a href="<?= ROOT . "/member/account/login" ?>" class="btn">Login/Regristreer</a>
+            <?php endif ?>
         </ul>
     </div>                
 </nav>
