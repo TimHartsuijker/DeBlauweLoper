@@ -17,12 +17,11 @@ if (isset($_SESSION["user"])) {
     
     <div col-5>
         <ul class="text-link">
-            <a href="" class="btn">Overzicht</a>
             <a href="" class="btn">Evenementen</a>
             <a href="informatie" class="btn">Informatie</a>
             <a href="" class="btn">Over ons</a>
-            <a href="" class="btn">Kids</a>
-            <?php if(isset($_SESSION["user"])) : ?> 
+            <?php if(isset($_SESSION["user"])) : ?>
+                <a href="" class="btn">Overzicht</a>
                 <a href="<?= ROOT . "/member/account/uitloggen" ?>" class="btn">uitloggen</a>
             <?php else : ?>
                 <?php $onPage = (ROUTE == "/member/account/login") ?>

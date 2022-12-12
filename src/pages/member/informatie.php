@@ -40,7 +40,7 @@
             <div>
                 <div>
                         <p>
-                            <h2>Informatie pionen</h2>
+                            <h2>Informatie pionnen</h2>
                             hieronder zie je een aantal kopjes, klik erop voor meer informatie:  
                             <p>   
                                 <h6 data-toggle="collapse" data-target="#koning">&bull; Koning</h6>
