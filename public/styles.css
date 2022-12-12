@@ -11,6 +11,10 @@
     background-color: #3A8891;
     color: #FFFFFF;
 }
+.btn:hover{
+    background-color: #0E5E6F;
+    color: #FFFFFF;
+}
 /*Hier boven staat css voor de header*/
 
 body{
@@ -19,3 +23,12 @@ body{
 .informatie{
     margin-right: 50%;
 }
+
+.achtergrond-box{
+    background-color: #F2DEBA;
+    margin-top: 10rem;
+}
+.img-right{
+    margin-right: 10rem;
+}
+
