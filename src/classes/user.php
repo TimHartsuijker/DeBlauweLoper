@@ -76,7 +76,6 @@ class user
         return new User((int)getPDO()->lastInsertId(), $username, $email, $phone, $birthdate, $password, $member);
     }
 
-
     public static function login(string $username, string $password): ?User
     {
         $params = array(

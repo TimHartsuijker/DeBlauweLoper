@@ -23,6 +23,7 @@ if (isset($_SESSION["user"])) {
             <?php if(isset($_SESSION["user"])) : ?>
                 <a href="" class="btn">Overzicht</a>
                 <a href="<?= ROOT . "/member/account/uitloggen" ?>" class="btn">uitloggen</a>
+                <a href="<?= ROOT . "/member/account/beheer" ?>" class="btn">Beheren</a>
             <?php else : ?>
                 <?php $onPage = (ROUTE == "/member/account/login") ?>
                 <a href="<?= ROOT . "/member/account/login" ?>" class="btn">Login/Regristreer</a>
