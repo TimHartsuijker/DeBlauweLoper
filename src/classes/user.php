@@ -59,6 +59,18 @@ class user
             return null;
         }
     }
+    public static function get(int $id): ?User
+    {
+        $params = array(":id" => $id);
+        $sth = getPDO()->prepare("SELECT `name`, `email`, `phone`, `birth`, `password_hash`, `member` FROM `user` WHERE `id` = :id LIMIT 1;");
+        $sth->execute($params);
+
+        if ($row = $sth->fetch()) {
+            return new User($id, $row["name"], $row["email"], $row["phone"], $row["birth"], $row["password_hash"], $row["member"] != 0);
+        } else {
+            return null;
+        }
+    }
 
     public static function register(string $username, string $email, string $phone, string $birthdate, string $password, int $member) :User
     {
@@ -92,6 +104,27 @@ class user
         return null;
     }
 
+
+
+
+    public static function updateUser(int $id, string $username, string $email, string $phone, string $birthdate, string $password, int $member): ?User
+    {
+        $params =  array(
+            ":id" => $id,
+            ":username" => $username,
+            ":email" => $email,
+            ":phone" => $phone,
+            ":birthdate" => $birthdate,
+            ":password_hash" => $password,
+            ":member" => $member
+        );
+
+        $sth = getPDO()->prepare("UPDATE `user` SET `name` = :username, `email` = :email, `phone` = :phone, `birth` = :birthdate, `password_hash` = :password_hash, `member` = :member WHERE `id` = :id");
+        $sth->execute($params);
+        
+        return Self::get($id);
+        
+    }
 }
 
 
