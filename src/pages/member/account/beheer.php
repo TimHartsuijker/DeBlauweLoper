@@ -5,7 +5,7 @@ if(!empty($_POST))
 {   
     $user = User::updateUser($user->getId(), $_POST['name'], $_POST['mail'], "0612345678" , "2022/02/02", $_POST['password'], 1);
 
-    $_SESSION['user'] = $user;
+    $_SESSION['user'] = $user; 
     header("Location: ". PATH);  
     exit;
 }
