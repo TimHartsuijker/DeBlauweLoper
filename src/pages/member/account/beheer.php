@@ -1,6 +1,5 @@
 <?php
 $user = $_SESSION['user'];
-print_r($user);
 
 if(!empty($_POST))
 {   
