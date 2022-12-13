@@ -25,7 +25,7 @@
                         </div>
                         <button class="btn">
                             Versturen
-                        </button>
+                        </button>       
                     </div>
                 </div>
             </div>
