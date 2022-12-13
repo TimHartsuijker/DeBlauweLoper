@@ -1,7 +1,3 @@
-<?php 
-
-
-?>
 
 <!DOCTYPE html>
 <html>
@@ -15,7 +11,8 @@
                 </div>
             </div>
         
-        
+            
+
             <div class = "overzicht">
                 <h2>Ledenoverzicht</h2>
             </div>
@@ -38,6 +35,7 @@
                     </thead>
                     <tbody>
                         <?php 
+                        require "db_conn.php"; 
                         $statement = $pdo->prepare("SELECT * FROM user"); 
                         $statement->execute(); 
                         $number_of_rows = $statement->fetchColumn(); 
