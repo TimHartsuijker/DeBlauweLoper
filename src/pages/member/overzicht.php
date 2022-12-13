@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <body>
@@ -34,7 +35,6 @@
                     </thead>
                     <tbody>
                         <?php 
-                        require ('db_conn.php'); 
                         $statement = $pdo->prepare("SELECT * FROM user"); 
                         $statement->execute(); 
                         $number_of_rows = $statement->fetchColumn(); 
