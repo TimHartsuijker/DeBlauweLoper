@@ -1,3 +1,18 @@
+<?php
+if (!empty($_POST)) 
+{
+    $user = User::login($_POST['name'], $_POST['password'] );
+
+    if(isset($user))
+    {
+        $_SESSION['user'] = $user;
+        echo "succes";
+        header('Location:'.ROOT );
+    }
+    
+}
+?>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-5 col-lg-4 achtergrond-box shadow rounded">
@@ -30,20 +45,4 @@
 </div>
 
 
-<?php
-if (!empty($_POST)) 
-{
-    $user = User::login($_POST['name'], $_POST['password'] );
 
-    if(isset($user))
-    {
-        $_SESSION['user'] = $user;
-        echo "succes";
-        header('Location:'.ROOT );
-    }
-    
-}
-
-
-
-?>

@@ -5,10 +5,10 @@ class user
     private function __construct(
         private int $id,
         private string $name,
-        private string $passwordHash,
-        private string $birthdate,
-        private string $phone,
         private string $email,
+        private string $phone,
+        private string $birthdate,
+        private string $passwordHash,
         private int $member,
     ){
     }
@@ -22,14 +22,9 @@ class user
         return $this->name;
     }
 
-    public function getPasswordHash(): string
+    public function getEmail(): string
     {
-        return $this->passwordHash;
-    }
-
-    public function getBirthdate(): string
-    {
-        return $this->birthdate;
+        return $this->email;
     }
 
     public function getPhone(): string
@@ -37,10 +32,16 @@ class user
         return $this->phone;
     }
 
-    public function getEmail(): string
+    public function getBirthdate(): string
     {
-        return $this->email;
+        return $this->birthdate;
     }
+
+    public function getPasswordHash(): string
+    {
+        return $this->passwordHash;
+    }
+
     public function getMember(): string
     {
         return $this->member;
@@ -90,6 +91,7 @@ class user
 
         return null;
     }
+
 }
 
 
