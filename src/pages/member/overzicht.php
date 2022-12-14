@@ -34,7 +34,7 @@
                         <th>E-mail</th>
                         <th>Telefoonnummer</th>
                         <th>Geboortedatum</th>
-                        <th>Wachtwoord</th>
+                        <th>Wachtwoord (hash)</th>
                         <th>Lidtype</th>
                     </thead>
                     <tbody>
